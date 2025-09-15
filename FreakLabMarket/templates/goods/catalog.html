@@ -9,9 +9,9 @@
     </header>
     <section class="tiles">
         {% for good in goods %}
-            <article class="style{{ forloop.counter0 }}">
+            <article class="style7">
                 <span class="image">
-                    <img src="{% static good.image %}" alt="" />
+                    <img src="{{ good.image.url }}" alt="" />
                 </span>
                 <a href="{% url 'goods:product' %}">
                     <h2>{{ good.name }}</h2>

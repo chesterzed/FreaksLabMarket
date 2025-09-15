@@ -4,20 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1d8e0f1-0cfb-4345-bb71-99e6fc991169" name="Changes" comment="New goods models.">
+    <list default="true" id="e1d8e0f1-0cfb-4345-bb71-99e6fc991169" name="Changes" comment="Debug toolbar">
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/goods/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/goods/templatetags/goods_tags.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FreakLabMarket/FreakLabMarket/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/FreakLabMarket/FreakLabMarket/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FreakLabMarket/FreakLabMarket/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FreakLabMarket/FreakLabMarket/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FreakLabMarket/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/FreakLabMarket/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FreakLabMarket/goods/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/FreakLabMarket/goods/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FreakLabMarket/static/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FreakLabMarket/templates/goods/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/FreakLabMarket/templates/goods/catalog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FreakLabMarket/templates/main/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/FreakLabMarket/templates/main/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -36,6 +47,9 @@
     &quot;accountId&quot;: &quot;4ea32de4-12d4-44a7-a5be-a677bd95c598&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 6
@@ -60,7 +74,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.intellij.python.django.customization.DjangoModulesConfigurable",
+    "settings.editor.selected.configurable": "editor.preferences.tabs",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -120,7 +134,7 @@
       <workItem from="1757440567352" duration="1893000" />
       <workItem from="1757484217167" duration="61000" />
       <workItem from="1757690423306" duration="49000" />
-      <workItem from="1757927199204" duration="20582000" />
+      <workItem from="1757927199204" duration="25948000" />
     </task>
     <task id="LOCAL-00001" summary="Create base, home, about templates/views. Add Assets. Set base routing. Create routing namespace.">
       <option name="closed" value="true" />
@@ -146,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757960227376</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Debug toolbar">
+      <option name="closed" value="true" />
+      <created>1757960739103</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1757960739103</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,7 +179,8 @@
     <MESSAGE value="Create base, home, about templates/views. Add Assets. Set base routing. Create routing namespace." />
     <MESSAGE value="Create goods app. Set up routing" />
     <MESSAGE value="New goods models." />
-    <option name="LAST_COMMIT_MESSAGE" value="New goods models." />
+    <MESSAGE value="Debug toolbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Debug toolbar" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
