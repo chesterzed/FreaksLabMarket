@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e1d8e0f1-0cfb-4345-bb71-99e6fc991169" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FreakLabMarket/FreakLabMarket/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FreakLabMarket/FreakLabMarket/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FreakLabMarket/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/FreakLabMarket/main/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +40,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Django Server.Yo.executor": "Run",
+    "Django Server.Yo.executor": "Debug",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
     "git-widget-placeholder": "develop",
     "last_opened_file_path": "E:/projects/labs",
     "node.js.detected.package.eslint": "true",
@@ -99,10 +102,27 @@
       <workItem from="1757440567352" duration="1893000" />
       <workItem from="1757484217167" duration="61000" />
       <workItem from="1757690423306" duration="49000" />
+      <workItem from="1757927199204" duration="2505000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/FreakLabMarket/main/views.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Python.DjangoServer">
+        <watch expression="request.path_info" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
