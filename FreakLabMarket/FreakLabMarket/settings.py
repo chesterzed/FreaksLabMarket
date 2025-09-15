@@ -25,6 +25,12 @@ SECRET_KEY = 'django-insecure-%0q1@3e_=zr^yjxqj6ypxsj^gncy#a5o9bh4en6vo)z69bxpa!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    # ...
+]
+
 ALLOWED_HOSTS = []
 
 
@@ -38,6 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    "debug_toolbar",
+
     'main',
     'goods',
 ]
@@ -50,6 +58,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = 'FreakLabMarket.urls'
