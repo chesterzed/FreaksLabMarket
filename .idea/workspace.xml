@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1d8e0f1-0cfb-4345-bb71-99e6fc991169" name="Changes" comment="Create base, home, about templates/views. Add Assets. Set base routing. Create routing namespace.">
-      <change afterPath="$PROJECT_DIR$/FreakLabMarket/templates/goods/catalog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FreakLabMarket/templates/goods/product.html" afterDir="false" />
+    <list default="true" id="e1d8e0f1-0cfb-4345-bb71-99e6fc991169" name="Changes" comment="Create goods app. Set up routing">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FreakLabMarket/FreakLabMarket/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/FreakLabMarket/FreakLabMarket/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FreakLabMarket/FreakLabMarket/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FreakLabMarket/FreakLabMarket/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FreakLabMarket/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/FreakLabMarket/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FreakLabMarket/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FreakLabMarket/goods/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/FreakLabMarket/goods/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FreakLabMarket/goods/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/FreakLabMarket/goods/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FreakLabMarket/main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/FreakLabMarket/main/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FreakLabMarket/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/FreakLabMarket/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FreakLabMarket/templates/main/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/FreakLabMarket/templates/main/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FreakLabMarket/templates/goods/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/FreakLabMarket/templates/goods/catalog.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +59,9 @@
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "develop",
-    "last_opened_file_path": "E:/projects/FreakLab/FreakLabMarket/static",
+    "last_opened_file_path": "E:/projects/FreakLab/FreakLabMarket/db.sqlite3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -125,7 +127,7 @@
       <workItem from="1757440567352" duration="1893000" />
       <workItem from="1757484217167" duration="61000" />
       <workItem from="1757690423306" duration="49000" />
-      <workItem from="1757927199204" duration="14868000" />
+      <workItem from="1757927199204" duration="19010000" />
     </task>
     <task id="LOCAL-00001" summary="Create base, home, about templates/views. Add Assets. Set base routing. Create routing namespace.">
       <option name="closed" value="true" />
@@ -135,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757952737142</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Create goods app. Set up routing">
+      <option name="closed" value="true" />
+      <created>1757954861106</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1757954861106</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,7 +154,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="some test views" />
     <MESSAGE value="Create base, home, about templates/views. Add Assets. Set base routing. Create routing namespace." />
-    <option name="LAST_COMMIT_MESSAGE" value="Create base, home, about templates/views. Add Assets. Set base routing. Create routing namespace." />
+    <MESSAGE value="Create goods app. Set up routing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create goods app. Set up routing" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

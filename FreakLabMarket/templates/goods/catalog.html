@@ -8,38 +8,18 @@
 {#        <p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore.</p>#}
     </header>
     <section class="tiles">
-        <article class="style1">
-            <span class="image">
-                <img src="{% static "images/pic01.jpg" %}" alt="" />
-            </span>
-            <a href="{% url 'goods:product' %}">
-                <h2>Magna</h2>
-                <div class="content">
-                    <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-                </div>
-            </a>
-        </article>
-        <article class="style2">
-            <span class="image">
-                <img src="{% static 'images/pic02.jpg' %}" alt="" />
-            </span>
-            <a href="{% url 'goods:product' %}">
-                <h2>Lorem</h2>
-                <div class="content">
-                    <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-                </div>
-            </a>
-        </article>
-        <article class="style3">
-            <span class="image">
-                <img src="{% static 'images/pic03.jpg' %}" alt="" />
-            </span>
-            <a href="{% url 'goods:product' %}">
-                <h2>Feugiat</h2>
-                <div class="content">
-                    <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-                </div>
-            </a>
-        </article>
-    </section>
+        {% for good in goods %}
+            <article class="style{{ forloop.counter0 }}">
+                <span class="image">
+                    <img src="{% static good.image %}" alt="" />
+                </span>
+                <a href="{% url 'goods:product' %}">
+                    <h2>{{ good.name }}</h2>
+                    <div class="content">
+                        <p>{{ good.description }}<br/>{{ good.price }}</p>
+                    </div>
+                </a>
+            </article>
+        {% endfor %}
+    </section>>
 {% endblock %}
