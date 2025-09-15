@@ -5,7 +5,80 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1d8e0f1-0cfb-4345-bb71-99e6fc991169" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/main/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/css/fontawesome-all.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/css/noscript.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/js/breakpoints.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/js/browser.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/js/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/base/_page.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/base/_reset.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/base/_typography.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/components/_actions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/components/_box.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/components/_button.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/components/_form.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/components/_icon.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/components/_icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/components/_image.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/components/_list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/components/_row.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/components/_section.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/components/_table.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/components/_tiles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/layout/_footer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/layout/_header.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/layout/_main.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/layout/_menu.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/layout/_wrapper.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/libs/_breakpoints.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/libs/_functions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/libs/_html-grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/libs/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/libs/_vars.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/libs/_vendor.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/main.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/sass/noscript.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/webfonts/fa-brands-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/webfonts/fa-brands-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/webfonts/fa-brands-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/webfonts/fa-regular-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/webfonts/fa-regular-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/webfonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/webfonts/fa-regular-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/webfonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/webfonts/fa-solid-900.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/webfonts/fa-solid-900.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/webfonts/fa-solid-900.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/assets/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/images/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/images/pic01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/images/pic02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/images/pic03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/images/pic04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/images/pic05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/images/pic06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/images/pic07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/images/pic08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/images/pic09.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/images/pic10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/images/pic11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/images/pic12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/images/pic13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/images/pic14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/static/images/pic15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/templates/includes/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/templates/includes/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreakLabMarket/templates/main/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FreakLabMarket/FreakLabMarket/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/FreakLabMarket/FreakLabMarket/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FreakLabMarket/FreakLabMarket/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FreakLabMarket/FreakLabMarket/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FreakLabMarket/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/FreakLabMarket/main/views.py" afterDir="false" />
     </list>
@@ -13,6 +86,14 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,12 +121,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Django Server.Yo.executor": "Debug",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.Yo.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
     "git-widget-placeholder": "develop",
-    "last_opened_file_path": "E:/projects/labs",
+    "last_opened_file_path": "E:/projects/FreakLab/FreakLabMarket/static",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -55,6 +137,15 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\projects\FreakLab\FreakLabMarket\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\projects\FreakLab\phantom" />
+      <recent name="E:\projects\FreakLab\FreakLabMarket\templates\main" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Yo" type="Python.DjangoServer" factoryName="Django server">
       <module name="FreakLab" />
@@ -102,7 +193,7 @@
       <workItem from="1757440567352" duration="1893000" />
       <workItem from="1757484217167" duration="61000" />
       <workItem from="1757690423306" duration="49000" />
-      <workItem from="1757927199204" duration="2505000" />
+      <workItem from="1757927199204" duration="12653000" />
     </task>
     <servers />
   </component>
