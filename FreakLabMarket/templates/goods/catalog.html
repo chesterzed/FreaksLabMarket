@@ -13,7 +13,7 @@
                 <span class="image">
                     <img src="{{ good.image.url }}" alt="" />
                 </span>
-                <a href="{% url 'goods:product' %}">
+                <a href="{% url 'goods:product' good.slug %}">
                     <h2>{{ good.name }}</h2>
                     <div class="content">
                         <p>{{ good.description }}<br/>{{ good.price }}</p>
@@ -21,5 +21,28 @@
                 </a>
             </article>
         {% endfor %}
-    </section>>
+    </section>
+    <br><br><br><br><br><br><br>
+    <section>
+        <ul class="actions">
+            <li><a href="#" class="button primary disabled">pagination</a></li>
+            {% if goods.has_previous %}
+                <li><a href="#" class="button">previous</a></li>
+<!--                <li><a href="{% url "goods:" %}" class="button">previous</a></li>-->
+            {% else %}
+                <li><a href="#" class="button disabled">previous</a></li>
+            {% endif %}
+            <li>
+                <div class="col-6 col-12-xsmall">
+                    <input class="col-1-small" type="text" name="demo-name" id="demo-name" value="" placeholder="page {{ goods.paginator.number }}">
+                </div>
+            </li>
+            {% if goods.paginator.has_next %}
+                <li><a href="#" class="button">next</a></li>
+            {% else %}
+                <li><a href="#" class="button disabled">next</a></li>
+            {% endif %}
+            <li><a href="#" class="button primary disabled">page: {{ goods.number }}</a></li>
+        </ul>
+    </section>
 {% endblock %}

@@ -15,7 +15,7 @@
                 <span class="image">
                     <img src="{{ good.image.url }}" alt="" />
                 </span>
-                <a href="{% url 'goods:product' %}">
+                <a href="{% url 'goods:product' good.slug %}">
                     <h2>{{ good.name }}</h2>
                     <div class="content">
                         <p>{{ good.description }}<br/>{{ good.price }}</p>
