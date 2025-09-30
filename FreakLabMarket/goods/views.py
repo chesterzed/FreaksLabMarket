@@ -5,11 +5,13 @@ from django.core.paginator import Paginator
 
 
 def catalog(request):
+    page = request.GET.get('page', 1)
+
     goods = Products.objects.all()
     categories = Categories.objects.all()
 
     paginator = Paginator(goods, 3)
-    current_page = paginator.page(1)
+    current_page = paginator.page(page)
 
     context = {
         'goods': current_page,
