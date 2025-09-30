@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% load goods_tags %}
+
+{% block content %}
+    <header>
+        <h1>This is Phantom, a free, fully responsive site<br />
+        template designed by <a href="http://html5up.net">HTML5 UP</a>.</h1>
+        <p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore.</p>
+    </header>
+    <section class="tiles">
+        {% some_goods as goods %}
+        {% for good in goods %}
+            <article class="style7">
+                <span class="image">
+                    <img src="{{ good.image.url }}" alt="" />
+                </span>
+                <a href="{% url 'goods:product' good.slug %}">
+                    <h2>{{ good.name }}</h2>
+                    <div class="content">
+                        <p>{{ good.description }}<br/>{{ good.price }}</p>
+                    </div>
+                </a>
+            </article>
+        {% endfor %}
+    </section>
+{% endblock %}

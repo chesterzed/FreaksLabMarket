@@ -1,0 +1,19 @@
+{% load static %}
+
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+            <a href="{% url 'main:home' %}" class="logo">
+                <span class="symbol"><img src="{% static 'images/logo.svg' %}" alt="" /></span><span class="title">Phantom</span>
+            </a>
+
+        <!-- Nav -->
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                </ul>
+            </nav>
+
+    </div>
+</header>
