@@ -16,8 +16,8 @@
             {% include 'includes/dropdown_filters.html' %}
         </div>
         <div class="col-10 col-6-medium">
-            <form method="get" action="{% url 'catalog:search' %}">
-                <input type="search" name="q" id="seach-textarea" value="" placeholder="Search"/>
+            <form method="get" action="{% url 'goods:search' %}">
+                <input type="text" name="q" id="seach-textarea" value="" placeholder="Search"/>
             </form>
         </div>
     </div>
