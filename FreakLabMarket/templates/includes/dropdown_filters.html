@@ -1,0 +1,37 @@
+
+<div class="filters-container">
+    <button class="filters-btn">Фильтры</button>
+    <div class="filters-content">
+        <form action="{% url "goods:catalog" %}" id="filters-form" method="get">
+            <div class="filter-section">
+                <div class="filter-title">Категории</div>
+                <div class="filter-options">
+                    {% for category in categories %}
+                        <label class="filter-option">
+                            <input type="checkbox"
+                                   id="{{ category.slug }}"
+                                   name="category"
+                                   value="{{ category.slug }}"
+                                   {% if category.slug in applied_filters.selected_cats %}checked{% endif %}>
+                            <span>{{ category.name }}</span>
+                        </label>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <div class="filter-title">Цена</div>
+                <div class="price-range">
+                    <input type="number" class="price-input" id="price-from" name="price-from" placeholder="от" min="0" value="{{ applied_filters.min_value }}">
+                    <span>-</span>
+                    <input type="number" class="price-input" id="price-to" name="price-to" placeholder="до" min="0" value="{{ applied_filters.max_value }}">
+                </div>
+            </div>
+
+            <div class="filter-actions">
+                <button type="button" class="filter-action-btn reset" id="reset-btn">Сброс</button>
+                <button type="submit" class="filter-action-btn apply">фильтр</button>
+            </div>
+        </form>
+    </div>
+</div>

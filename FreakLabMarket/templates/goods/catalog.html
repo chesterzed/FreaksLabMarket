@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load goods_tags %}
 
 {% block content %}
     <header>
@@ -7,6 +8,9 @@
         choose what you desire.</h1>
 {#        <p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore.</p>#}
     </header>
+    
+    {% include 'includes/dropdown_filters.html' %}
+    
     <section class="tiles">
         {% for good in goods %}
             <article class="style7">
@@ -16,7 +20,7 @@
                 <a href="{% url 'goods:product' good.slug %}">
                     <h2>{{ good.name }}</h2>
                     <div class="content">
-                        <p>{{ good.description }}<br/>{{ good.price }}</p>
+                        <p>{{ good.description|truncatechars:150 }}<br/>{{ good.price }}</p>
                     </div>
                 </a>
             </article>
@@ -25,24 +29,20 @@
     <br><br><br><br><br><br><br>
     <section>
         <ul class="actions">
-            <li><a href="#" class="button primary disabled">pagination</a></li>
+            <li><a href="#" class="button primary">pagination</a></li>
+
             {% if goods.has_previous %}
-                <li><a href="#" class="button">previous</a></li>
-<!--                <li><a href="{% url "goods:" %}" class="button">previous</a></li>-->
+                <li><a href="{% compile_url page=goods.previous_page_number %}" class="button">previous</a></li>
             {% else %}
                 <li><a href="#" class="button disabled">previous</a></li>
             {% endif %}
-            <li>
-                <div class="col-6 col-12-xsmall">
-                    <input class="col-1-small" type="text" name="demo-name" id="demo-name" value="" placeholder="page {{ goods.paginator.number }}">
-                </div>
-            </li>
-            {% if goods.paginator.has_next %}
-                <li><a href="#" class="button">next</a></li>
+            {% if goods.has_next %}
+                <li><a href="{% compile_url page=goods.next_page_number %}" class="button">next</a></li>
             {% else %}
                 <li><a href="#" class="button disabled">next</a></li>
             {% endif %}
-            <li><a href="#" class="button primary disabled">page: {{ goods.number }}</a></li>
+
+            <li><a href="#" class="button primary">page: {{ goods.number }}</a></li>
         </ul>
     </section>
 {% endblock %}
