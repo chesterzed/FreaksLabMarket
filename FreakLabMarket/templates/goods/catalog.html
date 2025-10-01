@@ -8,8 +8,21 @@
         choose what you desire.</h1>
 {#        <p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore.</p>#}
     </header>
-    
-    {% include 'includes/dropdown_filters.html' %}
+
+
+
+    <div class="row gtr-uniform">
+        <div class="col-2 col-6-medium col-6-small">
+            {% include 'includes/dropdown_filters.html' %}
+        </div>
+        <div class="col-10 col-6-medium">
+            <form method="get" action="{% url 'catalog:search' %}">
+                <input type="search" name="q" id="seach-textarea" value="" placeholder="Search"/>
+            </form>
+        </div>
+    </div>
+    <br>
+
     
     <section class="tiles">
         {% for good in goods %}
