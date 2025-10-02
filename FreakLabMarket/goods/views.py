@@ -9,7 +9,6 @@ def catalog(request):
     goods = Products.objects.all()
     categories = Categories.objects.all()
 
-
     filtered_goods, applied_filters = set_filter_settings(request, goods)
     current_page = get_current_page(request, filtered_goods)
 
