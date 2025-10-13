@@ -9,7 +9,13 @@
 {#        <p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore.</p>#}
     </header>
 
-
+    {% if request.GET.q %}
+        
+        <h2>результаты по запросу: {{ request.GET.q }}</h2>
+        {% if not goods %}
+            <h4>По запросу ничего не найдено</h4>
+        {% endif %} 
+    {% endif %} 
 
     <div class="row gtr-uniform">
         <div class="col-2 col-6-medium col-6-small">
@@ -39,7 +45,8 @@
             </article>
         {% endfor %}
     </section>
-    <br><br><br><br><br><br><br>
+    {% if goods %}
+            <br><br><br><br><br><br><br>
     <section>
         <ul class="actions">
             <li><a href="#" class="button primary">pagination</a></li>
@@ -58,4 +65,6 @@
             <li><a href="#" class="button primary">page: {{ goods.number }}</a></li>
         </ul>
     </section>
+    {% endif %} 
+    
 {% endblock %}
