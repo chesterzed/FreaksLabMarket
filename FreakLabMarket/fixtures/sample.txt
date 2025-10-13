@@ -1,0 +1,2 @@
+# for new fixture
+..\.venv\Scripts\python.exe .\manage.py dumpdata goods.Categories > .\fixtures\goods\categories.json
