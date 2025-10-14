@@ -29,7 +29,12 @@
 							<li><a href="{% url 'main:about' %}">About</a></li>
 							<li><a href="{% url 'goods:catalog' %}">catalog</a></li>
 							<li><a href="{% url 'admin:index' %}">admin</a></li>
-							<li><a href="{% url 'main:home' %}">Elements</a></li>
+                            
+							<li><a href="{% url 'users:profile' %}">Profile</a></li>
+                            <li><a href="{% url 'users:logout' %}">Logout</a></li>
+                            
+                            <li><a href="{% url 'users:login' %}">Log in</a></li>
+                            <li><a href="{% url 'users:registration' %}">Register</a></li>
 						</ul>
 					</nav>
 

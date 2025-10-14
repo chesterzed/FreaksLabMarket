@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+	<h1>Create Account</h1>
+    <p>Join our community by creating a new account.</p>
+
+    <!-- Registration Form -->
+        <section>
+            <h2>Registration Form</h2>
+            <form method="post" action="#">
+                <div class="row gtr-uniform">
+                    <div class="col-6 col-12-xsmall">
+                        <input type="text" name="demo-firstname" id="demo-firstname" value="" placeholder="First Name" />
+                    </div>
+                    <div class="col-6 col-12-xsmall">
+                        <input type="text" name="demo-lastname" id="demo-lastname" value="" placeholder="Last Name" />
+                    </div>
+                    <div class="col-12">
+                        <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email Address" />
+                    </div>
+                    <div class="col-6 col-12-xsmall">
+                        <input type="password" name="demo-password" id="demo-password" value="" placeholder="Password" />
+                    </div>
+                    <div class="col-6 col-12-xsmall">
+                        <input type="password" name="demo-confirm-password" id="demo-confirm-password" value="" placeholder="Confirm Password" />
+                    </div>
+                    <div class="col-12">
+                        <select name="demo-country" id="demo-country">
+                            <option value="">- Country -</option>
+                            <option value="1">United States</option>
+                            <option value="1">Canada</option>
+                            <option value="1">United Kingdom</option>
+                            <option value="1">Australia</option>
+                            <option value="1">Other</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <input type="text" name="demo-username" id="demo-username" value="" placeholder="Username" />
+                    </div>
+                    <div class="col-12">
+                        <textarea name="demo-bio" id="demo-bio" placeholder="Tell us about yourself (optional)" rows="3"></textarea>
+                    </div>
+                    <div class="col-6 col-12-small">
+                        <input type="checkbox" id="demo-terms" name="demo-terms">
+                        <label for="demo-terms">I agree to the <a href="#">Terms and Conditions</a></label>
+                    </div>
+                    <div class="col-6 col-12-small">
+                        <input type="checkbox" id="demo-newsletter" name="demo-newsletter" checked>
+                        <label for="demo-newsletter">Subscribe to newsletter</label>
+                    </div>
+                    <div class="col-12">
+                        <ul class="actions">
+                            <li><input type="submit" value="Create Account" class="primary" /></li>
+                            <li><input type="reset" value="Reset" /></li>
+                        </ul>
+                    </div>
+                    <div class="col-12">
+                        <p>Already have an account? <a href="{% url 'users:login' %}">Sign in here</a>.</p>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+{% endblock %}

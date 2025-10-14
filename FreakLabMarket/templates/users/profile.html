@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+	<header>
+        <h1>User Profile</h1>
+        <p>Manage your account settings and preferences.</p>
+    </header>
+
+    <!-- Profile Header -->
+        <section>
+            <div class="box alt">
+                <div class="row gtr-uniform">
+                    <div class="col-12">
+                        <span class="image fit"><img src="images/pic13.jpg" alt="" /></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-4 col-12-medium">
+                    <span class="image fit"><img src="images/pic14.jpg" alt="Profile Picture" class="profile-pic" /></span>
+                    <ul class="actions">
+                        <li><a href="#" class="button primary fit">Change Photo</a></li>
+                    </ul>
+                </div>
+                <div class="col-8 col-12-medium">
+                    <h2>John Doe</h2>
+                    <p><strong>Username:</strong> johndoe</p>
+                    <p><strong>Email:</strong> john.doe@example.com</p>
+                    <p><strong>Member since:</strong> January 15, 2023</p>
+                    <p><strong>Bio:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                    
+                    <ul class="actions">
+                        <li><a href="#" class="button primary">Edit Profile</a></li>
+                        <li><a href="#" class="button">Change Password</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    <!-- Profile Details -->
+        <section>
+            <h2>Account Information</h2>
+            <div class="table-wrapper">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><strong>Full Name</strong></td>
+                            <td>John Doe</td>
+                            <td><a href="#" class="button small">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Email</strong></td>
+                            <td>john.doe@example.com</td>
+                            <td><a href="#" class="button small">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Phone</strong></td>
+                            <td>+1 (555) 123-4567</td>
+                            <td><a href="#" class="button small">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Location</strong></td>
+                            <td>New York, USA</td>
+                            <td><a href="#" class="button small">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Website</strong></td>
+                            <td>www.johndoe.com</td>
+                            <td><a href="#" class="button small">Edit</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    <!-- Preferences -->
+        <section>
+            <h2>Preferences</h2>
+            <form method="post" action="#">
+                <div class="row gtr-uniform">
+                    <div class="col-6 col-12-small">
+                        <input type="checkbox" id="pref-newsletter" name="pref-newsletter" checked>
+                        <label for="pref-newsletter">Email Newsletter</label>
+                    </div>
+                    <div class="col-6 col-12-small">
+                        <input type="checkbox" id="pref-notifications" name="pref-notifications" checked>
+                        <label for="pref-notifications">Push Notifications</label>
+                    </div>
+                    <div class="col-6 col-12-small">
+                        <input type="checkbox" id="pref-public" name="pref-public">
+                        <label for="pref-public">Public Profile</label>
+                    </div>
+                    <div class="col-6 col-12-small">
+                        <input type="checkbox" id="pref-2fa" name="pref-2fa">
+                        <label for="pref-2fa">Two-Factor Authentication</label>
+                    </div>
+                    <div class="col-12">
+                        <ul class="actions">
+                            <li><input type="submit" value="Save Preferences" class="primary" /></li>
+                            <li><input type="reset" value="Reset" /></li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+    <!-- Statistics -->
+        <section>
+            <h2>Activity Statistics</h2>
+            <div class="row">
+                <div class="col-4 col-12-medium">
+                    <h3>125</h3>
+                    <p>Posts Published</p>
+                </div>
+                <div class="col-4 col-12-medium">
+                    <h3>2.4K</h3>
+                    <p>Comments Made</p>
+                </div>
+                <div class="col-4 col-12-medium">
+                    <h3>89</h3>
+                    <p>Days Active</p>
+                </div>
+            </div>
+        </section>
+
+{% endblock %}
