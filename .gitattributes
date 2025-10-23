@@ -1,1 +1,1 @@
-./FreakLabMarket/FreakLabMarket/secrets.py filter=git-crypt diff=git-crypt
+secrets.py filter=git-crypt diff=git-crypt
