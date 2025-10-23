@@ -1,3 +1,8 @@
+from re import search
+
+from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
+from django.db.models import Q
+
 from django.shortcuts import render
 from select import select
 
@@ -24,10 +29,15 @@ def set_filter_settings(request, goods):
     selected_cats = request.GET.getlist('category', None)
     min_value = request.GET.get('price-from', None)
     max_value = request.GET.get('price-to', None)
+    query = request.GET.get('q', None)
     applied_filters = dict()
 
     if selected_cats and 'all' not in selected_cats:
         goods = goods.filter(category__slug__in=selected_cats)
+
+    if query:
+        goods = q_search(goods, query)
+
     if selected_cats:
         applied_filters['selected_cats'] = selected_cats
 
@@ -42,6 +52,14 @@ def set_filter_settings(request, goods):
 
     return goods, applied_filters
 
+
+def q_search(goods, query):
+    if query.isdigit() and len(query) <= 5:
+        return goods.filter(id=int(query))
+
+    vector = SearchVector("name", "description")
+    query = SearchQuery(query)
+    return goods.annotate(rank=SearchRank(vector, query)).filter(rank__gt=0).order_by('-rank')
 
 
 def get_current_page(request, goods):

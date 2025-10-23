@@ -7,4 +7,5 @@ def home(request):
 
 
 def about(request):
-    return HttpResponse("About page.")
+    return render(request, 'main/about.html')
+

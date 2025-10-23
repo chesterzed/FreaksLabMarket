@@ -2,7 +2,10 @@
 <div class="filters-container">
     <button class="filters-btn">Фильтры</button>
     <div class="filters-content">
-        <form action="{% url "goods:catalog" %}" id="filters-form" method="get">
+        <form action="{% if request.GET.q %}{% url "goods:search" %}{% else %}{% url "goods:catalog" %}{% endif %}" id="filters-form" method="get">
+            {% if request.GET.q %}
+                <input type="hidden" name="q" value="{{ request.GET.q }}">
+            {% endif %} 
             <div class="filter-section">
                 <div class="filter-title">Категории</div>
                 <div class="filter-options">

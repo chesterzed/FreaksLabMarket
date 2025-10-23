@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+	<h1>Create Account</h1>
+    <p>Join our community by creating a new account.</p>
+
+    <!-- Registration Form -->
+        <section>
+            <h2>Registration Form</h2>
+            <form method="post" action="{% url "users:registration" %}">
+                {% csrf_token %}
+                <div class="row gtr-uniform">
+                    <div class="col-6 col-12-xsmall">
+                        <input type="text" 
+                               name="first_name" 
+                               id="id_first_name" 
+                               value="{% if form.first_name.value %}{{ form.first_name.value }}{% endif %}" 
+                               placeholder="First Name" />
+                        {% if form.first_name.errors %}
+                            <div class="fa-red-river">{{ form.first_name.errors }}</div>
+                        {% endif %}
+                    </div>
+                    <div class="col-6 col-12-xsmall">
+                        <input type="text" 
+                               name="last_name" 
+                               id="id_last_name" 
+                               value="{% if form.last_name.value %}{{ form.last_name.value }}{% endif %}" 
+                               placeholder="Last Name" />
+                        {% if form.last_name.errors %}
+                            <div class="fa-red-river">{{ form.last_name.errors }}</div>
+                        {% endif %}
+                    </div>
+                    <div class="col-12">
+                        <input type="text" 
+                               name="username" 
+                               id="id_username" 
+                               value="{% if form.username.value %}{{ form.username.value }}{% endif %}"
+                               placeholder="Username" required/>
+                        {% if form.username.errors %}
+                            <div class="fa-red-river">{{ form.username.errors }}</div>
+                        {% endif %}
+                    </div>
+                    <div class="col-12">
+                        <input type="email" 
+                               name="email" 
+                               id="id_email" 
+                               value="{% if form.email.value %}{{ form.email.value }}{% endif %}" 
+                               placeholder="Email Address" required/>
+                        {% if form.email.errors %}
+                            <div class="fa-red-river">{{ form.email.errors }}</div>
+                        {% endif %}
+                    </div>
+                    <div class="col-6 col-12-xsmall">
+                        <input type="password" 
+                               name="password1" 
+                               id="id_password1" 
+                               value="" 
+                               placeholder="Password" required/>
+                        {% if form.password1.errors %}
+                            <div class="fa-red-river">{{ form.password1.errors }}</div>
+                        {% endif %}
+                    </div>
+                    <div class="col-6 col-12-xsmall">
+                        <input type="password" 
+                               name="password2" 
+                               id="id_password2" 
+                               value="" 
+                               placeholder="Confirm Password" required/>
+                        {% if form.password2.errors %}
+                            <div class="fa-red-river">{{ form.password2.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="col-12">
+                        <textarea name="bio" 
+                                  id="id_bio" 
+                                  placeholder="Tell us about yourself (optional)"
+                                  value="{% if form.bio.value %}{{ form.bio.value }}{% endif %}"
+                                  rows="3"></textarea>
+                    </div>
+                    <div class="col-6 col-12-small">
+                        <input type="checkbox" id="demo-terms" name="demo-terms">
+                        <label for="demo-terms">I agree to the <a href="#">Terms and Conditions</a></label>
+                    </div>
+                    <div class="col-6 col-12-small">
+                        <input type="checkbox" id="demo-newsletter" name="demo-newsletter" checked>
+                        <label for="demo-newsletter">Subscribe to newsletter</label>
+                    </div>
+                    <div class="col-12">
+                        <ul class="actions">
+                            <li><input type="submit" value="Create Account" class="primary" /></li>
+                            <li><input type="reset" value="Reset" /></li>
+                        </ul>
+                    </div>
+                    <div class="col-12">
+                        <p>Already have an account? <a href="{% url 'users:login' %}">Sign in here</a>.</p>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+	<h1>Sign In</h1>
+    <p>Welcome back! Please sign in to your account.</p>
+
+    <!-- Login Form -->
+        <section>
+            <h2>Login Form</h2>
+            <form method="post" action="{% url "users:login" %}">
+                {% csrf_token %}
+                {% if request.GET.next %}
+                    <input type="hidden" name="next" value="{{ request.GET.next }}">
+                {% endif %} 
+                <div class="row gtr-uniform">
+                    <div class="col-12">
+                        {{ form.username }}
+                    </div>
+                    <div class="col-12">
+                        {{ form.password }}
+                    </div>
+                    <div class="col-6 col-12-small">
+                        <input type="checkbox" id="demo-remember" name="demo-remember" checked>
+                        <label for="demo-remember">Remember me</label>
+                    </div>
+                    <div class="col-6 col-12-small">
+                        <a href="#" class="button small fit">Forgot Password?</a>
+                    </div>
+                    <div class="col-12">
+                        <ul class="actions">
+                            <li><input type="submit" value="Sign In" class="primary" /></li>
+                            <li><input type="reset" value="Clear" /></li>
+                        </ul>
+                    </div>
+                    <div class="col-12">
+                        <p>Don't have an account? <a href="{% url 'users:registration' %}">Register here</a>.</p>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+    <!-- Social Login -->
+        <section>
+            <h3>Or sign in with</h3>
+            <ul class="icons">
+                <li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands style2 fa-google"><span class="label">Google</span></a></li>
+                <li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </section>
+
+{% endblock %}

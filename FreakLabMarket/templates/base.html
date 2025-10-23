@@ -28,8 +28,18 @@
 							<li><a href="{% url 'main:home' %}">Home</a></li>
 							<li><a href="{% url 'main:about' %}">About</a></li>
 							<li><a href="{% url 'goods:catalog' %}">catalog</a></li>
-							<li><a href="{% url 'admin:index' %}">admin</a></li>
-							<li><a href="{% url 'main:home' %}">Elements</a></li>
+                            {% if user.is_admin or user.is_staff %}
+							    <li><a href="{% url 'admin:index' %}">admin</a></li>
+                            {% endif %} 
+                            {% if user.is_authenticated %}
+                                <li><a href="{% url 'users:profile' %}">Profile</a></li>
+                                <li><a href="{% url 'users:logout' %}">Logout</a></li>
+                            {% else %}
+                                <li><a href="{% url 'users:login' %}">Log in</a></li>
+                                <li><a href="{% url 'users:registration' %}">Register</a></li>
+                            {% endif %} 
+                            
+
 						</ul>
 					</nav>
 
@@ -53,7 +63,7 @@
 			<script src="{% static 'assets/js/browser.min.js' %}"></script>
 			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
 			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/notifications.js' %}"></script>
 			<script src="{% static 'assets/js/main.js' %}"></script>
-
 	</body>
 </html>

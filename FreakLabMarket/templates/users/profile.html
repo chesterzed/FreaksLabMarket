@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+	<header>
+        <h1>User Profile</h1>
+        <p>Manage your account settings and preferences.</p>
+    </header>
+
+    <!-- Profile Header -->
+    <form method="post" action="{% url 'users:profile' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <section>
+{#            <div class="box alt">#}
+{#                <div class="row gtr-uniform">#}
+{#                    <div class="col-12">#}
+{#                        <span class="image fit"><img src="/media/goods_images/pic13.jpg" alt="" /></span>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+            
+            <div class="row">
+
+                <div class="col-4 col-12-medium">
+
+                    <span class="image fit">
+                        {% if user.image %}
+                            <img src="{{ user.image.url }}" alt="Profile Picture" class="profile-pic" />
+                        {% else %}
+                            <img src="/media/goods_images/pic15.jpg" alt="Profile Picture" class="profile-pic" />
+                        {% endif %}
+                    </span>
+                    <ul class="actions">
+
+                        <li><label for="id_image" class="button primary fit">
+                            <span class="file-icon">📁</span>
+                            <span class="file-text" id="file-status">Выберите файл</span>
+                        </label>
+                            <input type="file"
+                                   class=""
+                                   id="id_image"
+                                   name="image"
+                                   accept="image/*"
+                                   onchange="document.getElementById('file-status').textContent = this.files[0] ? '✓ Файл выбран' : 'Файл не выбран'"
+                                   style="display: none;"
+                            ></li>
+                    </ul>
+                    {% if form.image.errors %}
+                        <div class="align-center">{{ form.image.errors }}</div>
+                    {% endif %}
+
+
+                </div>
+
+                <div class="col-8 col-12-medium">
+
+                    <h2>{{ form.first_name.value }} {{ form.last_name.value }} aka. {{ form.username.value }}</h2>
+
+
+                    <div class="col-12 col-12-medium">
+                        <input type="text"
+                               name="first_name"
+                               id="id_first_name"
+                               value="{{ form.first_name.value }}"
+                               placeholder="First name" required/>
+                        {% if form.first_name.errors %}
+                            <div class="align-center">{{ form.first_name.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="col-12 col-12-medium">
+                        <input type="text"
+                               name="last_name"
+                               id="id_last_name"
+                               value="{{ form.last_name.value }}"
+                               placeholder="Last name" required/>
+                        {% if form.last_name.errors %}
+                            <div class="align-center">{{ form.last_name.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="col-12 col-12-medium">
+                        <input type="text"
+                               name="username"
+                               id="id_username"
+                               value="{{ form.username.value }}"
+                               placeholder="Username" required/>
+                        {% if form.username.errors %}
+                            <div class="align-center">{{ form.username.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="col-12 col-12-medium">
+                        <input type="email"
+                               name="email"
+                               id="id_email"
+                               value="{% if form.email.value %}{{ form.email.value }}{% endif %}"
+                               placeholder="Email" required/>
+                        {% if form.username.errors %}
+                            <div class="align-center">{{ form.email.errors }}</div>
+                        {% endif %}
+                    </div>
+                    <div class="col-12">
+                        <textarea name="bio"
+                                  id="id_bio"
+                                  placeholder="Tell us about yourself (optional)"
+                                  rows="3">
+                            {{ form.bio.value }}
+                        </textarea>
+                    </div>
+
+{#                    <p><strong>Bio:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>#}
+                    
+{#                    <ul class="actions">#}
+{#                        <li><a href="#" class="button primary">Edit Profile</a></li>#}
+{#                        <li><a href="#" class="button">Change Password</a></li>#}
+{#                    </ul>#}
+                </div>
+            </div>
+        </section>
+
+    <!-- Preferences -->
+        <section>
+            <h2>Additional settings</h2>
+            <div class="row gtr-uniform">
+                <div class="col-6 col-12-small">
+                    <input type="checkbox"
+                           id="id_newsletter"
+                           name="newsletter"
+                           {% if form.newsletter.value %}checked{% endif %}>
+                    <label for="id_newsletter">Email Newsletter</label>
+                </div>
+                <div class="col-6 col-12-small">
+                    <input type="checkbox"
+                           id="id_notifications"
+                           name="notifications"
+                           {% if form.notifications.value %}checked{% endif %}>
+                    <label for="id_notifications">Push Notifications</label>
+                </div>
+                <div class="col-12">
+                    <ul class="actions">
+                        <li><input type="submit" value="Save Preferences" class="primary" /></li>
+                        <li><input type="reset" value="Reset" /></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </form>
+{% endblock %}
