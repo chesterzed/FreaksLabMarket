@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-import secrets as sc
+import FreakLabMarket.secrets as sc
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -91,8 +91,8 @@ WSGI_APPLICATION = 'FreakLabMarket.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'FreakLab',
-        'USER': 'Chester',
+        'NAME': 'freaklab',
+        'USER': 'chester',
         'PASSWORD': 'CegthGfhjkm3',
         'HOST': 'localhost',
         'PORT': '5432',
