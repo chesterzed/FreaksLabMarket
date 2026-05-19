@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Creator: CorelDRAW 2026 -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="210mm" height="297mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 21000 29700"
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="44.0395mm" height="52.2349mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 1790.11 2123.24"
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str0 {stroke:#2B2A29;stroke-width:500;stroke-miterlimit:22.9256}
-    .str1 {stroke:#E31E24;stroke-width:500;stroke-miterlimit:22.9256}
+    .str0 {stroke:#2B2A29;stroke-width:203.24;stroke-miterlimit:22.9256}
+    .str1 {stroke:#E31E24;stroke-width:203.24;stroke-miterlimit:22.9256}
     .fil0 {fill:none}
     .fil1 {fill:#FEFEFE}
    ]]>
@@ -17,7 +17,7 @@ viewBox="0 0 21000 29700"
  </defs>
  <g id="Слой_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-  <circle class="fil0 str0" cx="7349.24" cy="7108.11" r="1251.57"/>
-  <path class="fil1 str1" d="M6675.95 6835.68l-222.01 -466.61 -222.01 -466.62 -222 -466.61 -222.01 -466.62 -222 -466.62 -222.01 -466.62c-53.94,-208.07 89.79,-413.82 328.31,-399.04l550.3 67.57 550.3 67.57 550.3 67.57 550.31 67.57 550.3 67.57c183.43,22.52 366.87,45.05 550.3,67.57 213.34,37.72 329.73,288.95 222,466.61l-328.3 399.05 -328.3 399.05 -328.29 399.04 -328.3 399.05 -328.29 399.05c-109.43,133.02 -218.87,266.03 -328.3,399.05 -151.39,187.45 -415.53,183.63 -550.3,-67.58z"/>
+  <circle class="fil0 str0" cx="921.26" cy="1512.88" r="508.73"/>
+  <path class="fil1 str1" d="M647.58 1402.14l-90.24 -189.67 -90.24 -189.67 -90.24 -189.67 -90.24 -189.67 -90.24 -189.67 -90.24 -189.67c-21.93,-84.58 36.5,-168.21 133.45,-162.2l223.69 27.47 223.69 27.47 223.69 27.47 223.69 27.47 223.69 27.47c74.56,9.15 149.12,18.31 223.69,27.47 86.72,15.33 134.03,117.45 90.24,189.67l-133.45 162.21 -133.45 162.21 -133.44 162.2 -133.45 162.21 -133.44 162.21c-44.48,54.07 -88.97,108.14 -133.45,162.21 -61.54,76.19 -168.9,74.64 -223.69,-27.47z"/>
  </g>
 </svg>
