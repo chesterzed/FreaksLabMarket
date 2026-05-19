@@ -31,7 +31,7 @@ INTERNAL_IPS = [
     # ...
 ]
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "192.168.194.17"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "192.168.194.17", "95.165.150.82"]
 
 
 # Application definition
