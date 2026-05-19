@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = sc.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 INTERNAL_IPS = [
     # ...
@@ -31,7 +31,7 @@ INTERNAL_IPS = [
     # ...
 ]
 
-ALLOWED_HOSTS = ["127.0.0.1", "192.168.194.17"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "192.168.194.17"]
 
 
 # Application definition
