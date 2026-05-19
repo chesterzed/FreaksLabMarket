@@ -23,7 +23,7 @@ from FreakLabMarket import settings
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('f78c4914f23acccb045f826c919609d443e81e21becae9cb44fad1b6aafbb8c4/', admin.site.urls),
     path('', include('main.urls', namespace='main')),
     path('catalog/', include('goods.urls', namespace='goods')),
     path('user/', include('users.urls', namespace='users')),
