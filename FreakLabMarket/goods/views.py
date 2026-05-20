@@ -64,7 +64,7 @@ def q_search(goods, query):
 
 def get_current_page(request, goods):
     page = request.GET.get('page', 1)
-    paginator = Paginator(goods, 3)
+    paginator = Paginator(goods, 12)
     return paginator.page(page)
 
 
