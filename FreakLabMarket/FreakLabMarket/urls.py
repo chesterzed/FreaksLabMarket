@@ -21,8 +21,8 @@ from debug_toolbar.toolbar import debug_toolbar_urls
 from django.conf.urls.static import static
 from FreakLabMarket import settings
 
-from django.views.static import serve
-from django.urls import re_path
+# from django.views.static import serve
+# from django.urls import re_path
 
 urlpatterns = [
     path('f78c4914f23acccb045f826c919609d443e81e21becae9cb44fad1b6aafbb8c4/', admin.site.urls),
@@ -31,13 +31,13 @@ urlpatterns = [
     path('user/', include('users.urls', namespace='users')),
 ]
 
-urlpatterns += [
-    re_path(
-        r"^media/(?P<path>.*)$",
-        serve,
-        {"document_root": settings.MEDIA_ROOT},
-    ),
-]
+# urlpatterns += [
+#     re_path(
+#         r"^media/(?P<path>.*)$",
+#         serve,
+#         {"document_root": settings.MEDIA_ROOT},
+#     ),
+# ]
 
 if settings.DEBUG:
     urlpatterns += debug_toolbar_urls()
