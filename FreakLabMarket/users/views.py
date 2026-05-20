@@ -52,9 +52,14 @@ def registration(request):
 @login_required
 def profile(request):
     if request.method == 'POST':
+        old_image = request.user.image
+        old_bg = request.user.background_image
         form = ProfileForm(data=request.POST, instance=request.user, files=request.FILES)
         if form.is_valid():
-            form.save()
+            profile = form.save(commit=False)
+            if not request.FILES.get('image'):
+                profile.image = old_image
+            profile.save()
             return HttpResponseRedirect(reverse('users:profile'))
         print("Form errors:", form.errors)
         print("Non-field errors:", form.non_field_errors())

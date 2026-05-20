@@ -3,8 +3,8 @@
 
 {% block content %}
 	<header>
-        <h1>User Profile</h1>
-        <p>Manage your account settings and preferences.</p>
+        <h1>Профиль {{ form.username.value }}</h1>
+        <p>Можете настроить ваши настройки :)</p>
     </header>
 
     <!-- Profile Header -->
@@ -54,7 +54,7 @@
 
                 <div class="col-8 col-12-medium">
 
-                    <h2>{{ form.first_name.value }} {{ form.last_name.value }} aka. {{ form.username.value }}</h2>
+                    <h2>{{ form.first_name.value }} {{ form.last_name.value }}</h2>
 
 
                     <div class="col-12 col-12-medium">
