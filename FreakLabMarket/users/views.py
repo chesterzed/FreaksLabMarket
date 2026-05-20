@@ -62,7 +62,9 @@ def profile(request):
             profile = form.save(commit=False)
             if not request.FILES.get('image'):
                 profile.image = old_image
+            logger.debug(f"IMAGE BEFORE SAVE: {profile.image}")
             profile.save()
+            logger.debug(f"IMAGE AFTER SAVE: {profile.image}")
             return HttpResponseRedirect(reverse('users:profile'))
         print("Form errors:", form.errors)
         print("Non-field errors:", form.non_field_errors())
