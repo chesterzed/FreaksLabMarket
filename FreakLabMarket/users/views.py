@@ -3,7 +3,8 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls import reverse
-
+import logging
+logger = logging.getLogger(__name__)
 from users.forms import UserLoginForm, UserRegisterForm, ProfileForm
 
 
@@ -51,6 +52,8 @@ def registration(request):
 
 @login_required
 def profile(request):
+    logger.debug(f"FILES: {request.FILES}")
+    logger.debug(f"POST: {request.POST}")
     if request.method == 'POST':
         old_image = request.user.image
         old_bg = request.user.background_image
