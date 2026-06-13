@@ -3,7 +3,8 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls import reverse
-
+import logging
+logger = logging.getLogger(__name__)
 from users.forms import UserLoginForm, UserRegisterForm, ProfileForm
 
 
@@ -51,10 +52,19 @@ def registration(request):
 
 @login_required
 def profile(request):
+    logger.debug(f"FILES: {request.FILES}")
+    logger.debug(f"POST: {request.POST}")
     if request.method == 'POST':
+        old_image = request.user.image
+        old_bg = request.user.background_image
         form = ProfileForm(data=request.POST, instance=request.user, files=request.FILES)
         if form.is_valid():
-            form.save()
+            profile = form.save(commit=False)
+            if not request.FILES.get('image'):
+                profile.image = old_image
+            logger.debug(f"IMAGE BEFORE SAVE: {profile.image}")
+            profile.save()
+            logger.debug(f"IMAGE AFTER SAVE: {profile.image}")
             return HttpResponseRedirect(reverse('users:profile'))
         print("Form errors:", form.errors)
         print("Non-field errors:", form.non_field_errors())

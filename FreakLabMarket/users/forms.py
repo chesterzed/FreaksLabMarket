@@ -56,7 +56,7 @@ class ProfileForm(UserChangeForm):
             'newsletter',
             'notifications',
         ]
-    # image = forms.ImageField(required=False)
+    image = forms.ImageField(required=False)
     # background_image = forms.ImageField()
     first_name = forms.CharField()
     last_name = forms.CharField()
